@@ -1,0 +1,84 @@
+What is Git?
+	Git is free and open source distributed version control system designed to handle everything from small to very large projects with speed and efficiecy.
+	Git is a software for tracking changes in any set of files, usually used for coordinating work among the programmers collaberatively developing source code during software development. It's goal is to increase the speed and data integrity.
+
+What is GitHub?
+	GitHub is a version control system tool in which we can store our projects inside the GitHub which is known as Repository and we can easily make changes and we can easily access from anywhere (remotely).
+	GitHub provides access control and several collaboration features such as bug tracking, feature requests, task management, continuous integration and wikis for every project. 
+	
+What is Git clone?
+	Git clone is nothing but a process of downloading an already presented repository to your local system.
+	Git cloning can be achieved by using the following command.
+	-- git clone <url>
+	
+What is Git fork?
+	Git fork is a process of creating a copy of complete repository to the user GitHub account from another account.
+	Git fork can be achieved by.
+	clicking on fork option on user repository. 
+
+What do you mean by Git Branch?
+	A branch is a version of the repository that diverges from the main working project. It is a feature available in most modern version control systems. 
+	A Git project can have more than one branch. 
+	These branches are a pointer to a snapshot of your changes. 
+	When you want to add a new feature or fix a bug, you spawn a new branch to summarize your changes. 
+	So, it is complex to merge the unstable code with the main code base and also facilitates you to clean up your future history before merging with the main branch.
+	
+	Creation of Branch :-         git branch <branch_name>
+	List of branches available :- git branch
+							      git branch --list
+	Deletion of Branch :-         git branch -d <branch_name> or git branch -D <branch_name>
+	Deletion of Remote branch :-  git push origin -delete <branch_name>
+	Switch Branch :-              git checkout <branch_name>
+	Renaming Branch name :-       git branch -m <old_branch_name> <new_branch_name>
+						      
+	
+What do you mean by Git Merge?
+	Git allows you to merge the other branch with the currently active branch. You can merge two branches with the help of git merge command. 
+	Below command is used to merge the branches:
+	-- git merge <branch_name>
+	
+How to create a Repository?
+	-- git init or you can create in GitHub itself.
+	
+How to push the code into the Repository?
+
+How to pull the code from the Repository?
+Essential commands?
+	-- git init
+		This command turns a directory into an empty Git repository. This is the first step in creating a repository
+	
+	-- git clone
+		To create a local working copy of an existing remote repository, use git clone to copy and download the repository to a computer. 			Cloning is the equivalent of git init when working with a remote repository. Git will create a directory locally with all files and 		repository history.
+		
+	-- git add
+		Adds files in the to the staging area for Git. Before a file is available to commit to a repository, the file needs to be added to 			the Git index (staging area). There are a few different ways to use git add, by adding entire directories, specific files, or all 			unstaged files.
+		
+	-- git commit
+		Record the changes made to the files to a local repository. For easy reference, each commit has a unique ID.
+
+		It’s best practice to include a message with each commit explaining the changes made in a commit. Adding a commit message helps to 			find a particular change or understanding the changes.
+		
+	-- git status
+		This command returns the current state of the repository.
+
+		git status will return the current working branch. If a file is in the staging area, but not committed, it shows with git status. 			Or, if there are no changes it’ll return nothing to commit, working directory clean.
+		
+	-- git branch
+		To determine what branch the local repository is on, add a new branch, or delete a branch.
+		
+	-- git merge
+		Integrate branches together. git merge combines the changes from one branch to another branch. For example, merge the changes made 			in a staging branch into the stable branch.
+		
+	-- git checkout	
+		To start working in a different branch, use git checkout to switch branches.
+		
+	-- git pull
+		To get the latest version of a repository run git pull. This pulls the changes from the remote repository to the local computer.
+		
+	-- git push
+		Sends local commits to the remote repository. git push requires two parameters: the remote repository and the branch that the push 			is for.
+
+	-- git log
+		To show the chronological commit history for a repository. This helps give context and history for a repository. git log is 		  available immediately on a recently cloned repository to see history.
+		
+Exploring full features of GitHub and Git Commands which has not used before.
