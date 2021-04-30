@@ -1,4 +1,3 @@
-
 package pkg;
 import java.util.*;
 import java.io.FileWriter;
@@ -71,10 +70,12 @@ public class jeevan {
         	   		System.out.println(sampleObject);
             		break;
             		
-           case 3 : 
-           			System.out.println("Random number : " +arr[new Random().nextInt(arr.length)]);
-           			break;
+           case 3 :Random r1=new Random(); 
+        	   int ram=r1.nextInt(6);
+        	   System.out.println(ram);
            			
+           		
+           			break;
         	   		
            case 4 : System.out.println(" lowest to highest  order");
            			for (int i=0; i<arr.length; i++)   
@@ -123,5 +124,6 @@ public class jeevan {
 	}
 
 }
+
 
 
