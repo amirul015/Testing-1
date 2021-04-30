@@ -1,0 +1,128 @@
+package com.devops.exercise1;
+
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Random;
+import java.util.Scanner;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+public class Problem1 {
+	public static void main(String[] args) throws JSONException
+	{
+		int sum = 0;
+		Scanner s1 = new Scanner(System.in);
+		System.out.println("Enter numbers: " );
+		int[] a1 = new int[6];
+		for(int i=0; i<6; i++)
+		{
+			a1[i] = s1.nextInt();
+			//sum = sum + a1[i];
+		}
+
+		
+		System.out.println("Enter the choice:");
+		System.out.println("1.Perform subtraction");
+		System.out.println("2.Perform Multiplication:");
+		System.out.println("3.Pick a random number:");
+		System.out.println("4.To print in a sorted order(H-L):");
+		System.out.println("5.To print in a sorted order(L-H):");
+		
+		
+		int option = s1.nextInt();
+		switch(option)
+		{
+		case 1 : System.out.println("Enter the master number: ");
+				 int sub = s1.nextInt();
+				 for(int i=0; i<6; i++)
+				 {
+					 System.out.print(sub-a1[i]+",");
+					 System.out.println();
+				 }
+				 break;
+				 
+		case 2 : 
+				
+				JSONObject obj = new JSONObject();
+				for(int i=0; i<6; i++)
+				{
+					obj.put("InputNumber"+i,+a1[i]);
+					
+				}
+				int mul = 1;
+				for(int i=0; i<6; i++)
+				{
+					mul = mul*a1[i];
+				}
+				obj.put("Multiplication", mul); 
+				try
+				{
+					FileWriter file = new FileWriter("//E://JsonObject//file1.json");
+					file.write(obj.toString());
+					file.flush();
+					file.close();
+				}
+				catch(IOException e)
+				{
+					e.printStackTrace();
+				}
+				
+				System.out.println(obj);
+				
+				 
+				break; 
+				
+				
+		case 3 : 
+				int random = new Random().nextInt(a1.length);
+				System.out.println("Random number: "+random);
+				break;
+		case 4 : 
+				//sorting h-l
+				int temp=0;
+				for(int i=0; i<a1.length; i++)
+				{
+					for(int j=i+1; j<a1.length; j++)
+					{
+						if(a1[i]<a1[j])
+						{
+							temp= a1[i];
+							a1[i] = a1[j];   
+							a1[j] = temp;
+						}
+						
+					}
+					System.out.println(a1[i]);
+				}
+				break;
+				
+		case 5 : 
+			
+			//sorting l-h
+				int temp1=0;
+				for(int i=0; i<a1.length; i++)
+				{
+					for(int j=i+1; j<a1.length; j++)
+					{
+						if(a1[i]>a1[j])
+						{
+							temp1= a1[i];
+							a1[i] = a1[j];   
+							a1[j] = temp1;
+						}
+						
+					}
+					System.out.println(a1[i]);
+				}
+				break;
+				
+		default: 	
+		
+				
+		}
+	}
+	
+
+}
+
